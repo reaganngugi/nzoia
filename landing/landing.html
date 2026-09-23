@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0e0d">
+  <title>Knox by Nzoia | Scam detection intelligence</title>
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Knox by Nzoia home">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>KN<span class="brand-o">O</span>X <em>by Nzoia</em></span>
+      </a>
+      <div class="topbar-actions">
+        <span class="status"><span class="status-dot"></span>Protection active</span>
+        <button class="icon-button" type="button" aria-label="Open settings" title="Settings">&#9881;</button>
+        <div class="avatar" aria-label="User profile">JM</div>
+      </div>
+    </header>
+
+    <main id="top" class="main-content">
+      <section class="intro-grid">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>Personal threat intelligence</p>
+          <h1>Pause. Check.<br><span>Proceed safely.</span></h1>
+          <p class="intro-text">Knox reads the signals hidden in suspicious messages, links, files, and voices before they become your problem.</p>
+        </div>
+        <div class="signal-visual" aria-label="Knox threat signal visualization">
+          <div class="signal-orbit orbit-one"></div>
+          <div class="signal-orbit orbit-two"></div>
+          <div class="signal-core"><span>KNX</span><small>AI CORE</small></div>
+          <div class="signal-label signal-label-top">REAL-TIME<br><strong>ANALYSIS</strong></div>
+          <div class="signal-label signal-label-bottom">SIGNAL<br><strong>READY</strong></div>
+        </div>
+      </section>
+
+      <section class="workspace-grid" aria-label="Scam analysis workspace">
+        <div class="panel scan-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="section-kicker">01 / Inspect a signal</p>
+              <h2>What feels off?</h2>
+            </div>
+            <span class="secure-badge"><span class="lock-icon">&#128274;</span> Private session</span>
+          </div>
+
+          <div class="mode-tabs" role="tablist" aria-label="Content type">
+            <button class="mode-tab is-active" role="tab" aria-selected="true" data-mode="message"><span>&#9993;</span> Message</button>
+            <button class="mode-tab" role="tab" aria-selected="false" data-mode="url"><span>&#9671;</span> URL</button>
+            <button class="mode-tab" role="tab" aria-selected="false" data-mode="image"><span>&#9638;</span> Image</button>
+            <button class="mode-tab" role="tab" aria-selected="false" data-mode="audio"><span>&#9835;</span> Audio</button>
+          </div>
+
+          <div class="input-wrap">
+            <label for="signal-input" class="sr-only">Paste suspicious content</label>
+            <textarea id="signal-input" placeholder="Paste a suspicious message, email, or anything that made you pause..." spellcheck="true"></textarea>
+            <div class="input-footer">
+              <span class="input-hint"><span class="green-pulse"></span> Knox can read context, intent, and patterns</span>
+              <span id="char-count">0 / 5,000</span>
+            </div>
+          </div>
+
+          <div class="context-row">
+            <div class="context-icon" aria-hidden="true">+</div>
+            <div>
+              <label for="context-input">Add context <span>optional</span></label>
+              <input id="context-input" type="text" placeholder="What were you expecting? Who sent it?">
+            </div>
+          </div>
+
+          <div class="action-row">
+            <label class="upload-button" for="file-input"><span>&#8593;</span> Attach file</label>
+            <input id="file-input" type="file" hidden accept="image/*,audio/*,.pdf,.txt,.eml">
+            <span id="file-name" class="file-name">Images, audio, PDF or email</span>
+            <button id="scan-button" class="scan-button" type="button"><span>Analyze with Knox</span><b>&rarr;</b></button>
+          </div>
+        </div>
+
+        <aside class="panel response-panel">
+          <div class="response-topline">
+            <div>
+              <p class="section-kicker">02 / Knox response</p>
+              <h2>Signal report</h2>
+            </div>
+            <span class="live-indicator"><span></span> Live</span>
+          </div>
+          <div id="response-state" class="response-state empty-state">
+            <div class="empty-icon"><span></span><span></span><span></span></div>
+            <h3>Your readout will appear here</h3>
+            <p>Submit a message or upload a file. Knox will explain the risk in plain language.</p>
+          </div>
+          <div id="response-result" class="response-result" hidden>
+            <div class="result-header"><span class="risk-tag">HIGH RISK</span><span class="result-time">just now</span></div>
+            <h3>Likely impersonation attempt</h3>
+            <p class="result-summary">This message uses urgency and a request for sensitive information, both common signals of social engineering.</p>
+            <div class="result-score"><div class="score-ring"><strong>86</strong><span>/100</span></div><div><small>Risk confidence</small><div class="meter"><span></span></div></div></div>
+            <div class="signal-list"><div><span class="signal-bullet danger">!</span><span><strong>Urgency language</strong><small>Pressures you to act immediately.</small></span></div><div><span class="signal-bullet warning">?</span><span><strong>Unusual request</strong><small>Asks for a code or private details.</small></span></div></div>
+            <button id="clear-button" class="clear-button" type="button">Clear report</button>
+          </div>
+          <div class="response-footer"><span class="sparkle">&#10022;</span> Knox explains the why, not just the warning.</div>
+        </aside>
+      </section>
+
+      <section class="recent-section">
+        <div class="recent-heading"><div><p class="section-kicker">03 / Your activity</p><h2>Recent checks</h2></div><button class="text-button" type="button">View all <span>&rarr;</span></button></div>
+        <div class="activity-list">
+          <div class="activity-item"><div class="activity-icon safe">&#10003;</div><div><strong>Package delivery notification</strong><span>Today, 10:42 AM &middot; Message</span></div><span class="activity-status safe-text">Low risk</span><span class="activity-arrow">&rarr;</span></div>
+          <div class="activity-item"><div class="activity-icon review">?</div><div><strong>Unknown caller voicemail</strong><span>Yesterday, 4:18 PM &middot; Audio</span></div><span class="activity-status review-text">Review</span><span class="activity-arrow">&rarr;</span></div>
+          <div class="activity-item"><div class="activity-icon safe">&#10003;</div><div><strong>Invoice from Northstar Studio</strong><span>Sep 20, 2026 &middot; PDF</span></div><span class="activity-status safe-text">Low risk</span><span class="activity-arrow">&rarr;</span></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer"><span>KN<span class="brand-o">O</span>X / Nzoia intelligence systems</span><span>Built for the moment before you click.</span></footer>
+  </div>
+  <script src="landing.js"></script>
+</body>
+</html>
